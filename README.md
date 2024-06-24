@@ -44,5 +44,10 @@ So when you don't modify the health check
 a) your app container must expose such an endpoint and
 b) the container must have `curl` installed. **Spoiler:** In node-alpine images, `curl` is not installed by default.
 
+### Gotchas while adding accessories
 
+Note that accessories are NOT automatically added, updated, or removed when you run `kamal deploy`.
+Instead, to add an accessory, you must first add it in the config file and then run `kamal accessory boot <my-accessory>`.
+
+In contrast to docker compose, the accessories' hosts must be ip addresses, not service names.
 
