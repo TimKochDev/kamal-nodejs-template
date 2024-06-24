@@ -74,6 +74,11 @@ traefik:
   args:
     accesslog: true
     accesslog.format: json
+    api.dashboard: true
+    api.insecure: true
+  options:
+    publish:
+      - 8080:8080
 
 # Configure a custom healthcheck (default is /up on port 3000)
 healthcheck:
