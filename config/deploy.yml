@@ -10,6 +10,9 @@ image: timkochdev/kamal-nodejs-template
 servers:
   - 168.119.124.184
 
+builder:
+  target: prod
+
 # Credentials for your image host.
 registry:
   # Specify the registry server, if you're not using Docker Hub
@@ -19,6 +22,7 @@ registry:
   # Always use an access token rather than real password when possible.
   password:
     - KAMAL_REGISTRY_PASSWORD
+
 
 # Inject ENV variables into containers (secrets come from .env).
 # Remember to run `kamal env push` after making changes!
@@ -66,15 +70,16 @@ registry:
 #       - data:/data
 
 # Configure custom arguments for Traefik. Be sure to reboot traefik when you modify it.
-# traefik:
-#   args:
-#     accesslog: true
-#     accesslog.format: json
+traefik:
+  args:
+    accesslog: true
+    accesslog.format: json
 
 # Configure a custom healthcheck (default is /up on port 3000)
-# healthcheck:
-#   path: /healthz
-#   port: 4000
+healthcheck:
+  path: /
+  max_attempts: 10
+  port: 3000
 
 # Bridge fingerprinted assets, like JS and CSS, between versions to avoid
 # hitting 404 on in-flight requests. Combines all files from new and old
