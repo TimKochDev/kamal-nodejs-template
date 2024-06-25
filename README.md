@@ -51,3 +51,11 @@ Instead, to add an accessory, you must first add it in the config file and then 
 
 In contrast to docker compose, the accessories' hosts must be ip addresses, not service names.
 
+### Open questions
+
+To be honest, how can Kamal be the best open-source tool that we have?
+It solves a problem that is shared by every single developer on this planet.
+There should be more widespread solutions to this problem.
+Paying managed services 10$ per month is okay, but not for every container (backend, frontend, database, redis, etc.).
+
+How can I deploy a static frontend together with this backend service?
