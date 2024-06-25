@@ -61,4 +61,13 @@ Paying managed services 10$ per month is okay, but not for every container (back
 How can I deploy a static frontend together with this backend service?
 At first I thought Kamal would work almost exactly like Docker Compose.
 However, the big difference is that Kamal is intended(/just capable?) to deploy to multiple servers.
+
+<details>
+    <summary>My failed experiment to add Docker-like networks</summary>
+
 [This article](https://guillaumebriday.fr/how-to-deploy-rails-with-kamal-postgresql-sidekiq-and-backups-on-a-single-host) mentions the network option like in Docker Compose (Docker Compose creates a shared network for all services by default).
+I am trying this now. I receive a Docker error: "Network not found".
+[This blog post](https://www.fromthekeyboard.com/single-server-kamal-deployments-with-a-docker-network/)
+reassures that Kamal is not made for that purpose.
+So I stop this experiment here.
+</details>
