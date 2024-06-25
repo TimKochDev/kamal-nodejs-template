@@ -3,3 +3,4 @@ db/
 compose.yaml
 .kamal/hooks/*.sample
 .env*
+notes.md

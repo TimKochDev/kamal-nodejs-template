@@ -59,3 +59,6 @@ There should be more widespread solutions to this problem.
 Paying managed services 10$ per month is okay, but not for every container (backend, frontend, database, redis, etc.).
 
 How can I deploy a static frontend together with this backend service?
+At first I thought Kamal would work almost exactly like Docker Compose.
+However, the big difference is that Kamal is intended(/just capable?) to deploy to multiple servers.
+[This article](https://guillaumebriday.fr/how-to-deploy-rails-with-kamal-postgresql-sidekiq-and-backups-on-a-single-host) mentions the network option like in Docker Compose (Docker Compose creates a shared network for all services by default).
