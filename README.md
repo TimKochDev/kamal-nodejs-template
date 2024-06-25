@@ -1,6 +1,29 @@
-# Personal Development Journal
+## Part A - Economical Evaluation of Kamal
 
-_These are my personal notes. I do not expect anyone to read them. I write them for myself._
+Managed hosting solutions (like Heroku, Render, Fly.io, and also managed databases) hide the complexity needed to deploy and maintain a web application.
+For that, they charge a premium - usually per container/app/service without much of a quantity discount.
+Hence, your bill grows linearly with the number of services you deploy.
+
+At some level, the combined "management costs" for all services becomes larger than if you invested your own time(=money) to manage the infrastructure.
+If some new tool now helps you to deploy to unmanaged servers more easily, this level is reached earlier.
+Kamal does exactly that.
+
+Read [their vision](https://kamal-deploy.org/) to learn more about the benefits of Kamal.
+Here, however, I focus on **when not to use Kamal**:
+
+- I said Kamal **lowered** the break-even point to justify your own infrastructure management. However, it does not **eliminate** it.
+If you deploy only a small number of services, the overhead of managing your own infrastructure might still be too high to break even.
+ In this case, you should stick to managed services (from an economic perspective).
+- For higly complex deployments, Kamal might not be the right tool. It was designed with Rails apps with an off-the-shelf database in mind.
+
+For me, personally, Kamal is not the right tool because I manage only a few, low-traffic services.
+So I rather enjoy a 7$ managed service on render.com, than spending 4$ on a VPS (doesn't matter) plus hours of setting up the VPS, the SSH keys, the Docker containers, the health checks, the backups, the monitoring, the scaling, etc.
+Of course, the decision would look different if I had to decide between 100 containers on render (700$) versus way less containers on a VPS (because I could place multiple services on one VPS).
+
+## Part B - Personal Development Journal
+
+> These are my personal notes. I wrote this **while** I was working on it. 
+> I do not expect anyone to read this.
 
 I desperately wanted a free tool to deploy on cheaper (more dumb) servers compared to managed services like Heroku, Render, Fly.io.
 Kamal promised this.
